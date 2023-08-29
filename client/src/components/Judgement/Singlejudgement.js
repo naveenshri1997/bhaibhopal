@@ -26,9 +26,9 @@ const Singlejudgement = () => {
     }, [id])
     const imageval = String(judgements.image);
     const str = imageval.slice(14);
-    const url = `http://localhost:5000/${str}`;
+    const url = `https://bhaibhopal.onrender.com/${str}`;
     console.log('uirl', url);
-    const lurl = "http://localhost:5000";
+    const lurl = "https://bhaibhopal.onrender.com";
     
     return (
         <>
