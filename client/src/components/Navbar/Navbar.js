@@ -9,27 +9,27 @@ const Navbar = () => {
   useEffect(() => {
  
 
-    const res1 = fetch('http://localhost:5000/lawdatanavbar', {
+    const res1 = fetch('https://server-dccr.onrender.com/lawdatanavbar', {
       method: "GET",
     }).then((res1) => res1.json()).then(data => {
       setSubLaw(data.data);
     })
 
-    const res2 = fetch('http://localhost:5000/showbloglimit', {
+    const res2 = fetch('https://server-dccr.onrender.com/showbloglimit', {
       method: 'GET',
     }).then((res2) => res2.json()).then(data => {
       setblog(data.data);
 
     })
 
-    const res3 = fetch('http://localhost:5000/showtemplate', {
+    const res3 = fetch('https://server-dccr.onrender.com/showtemplate', {
       method: 'GET',
     }).then((res3) => res3.json()).then(data => {
       settemplate(data.data);
 
     })
 
-    const res4 = fetch('http://localhost:5000/showjudgementlimit', {
+    const res4 = fetch('https://server-dccr.onrender.com/showjudgementlimit', {
       method: 'GET',
     }).then((res4) => res4.json()).then(data => {
       setjudgement(data.data);
