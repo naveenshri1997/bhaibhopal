@@ -1,0 +1,18 @@
+/* 
+    * Middleware to uplad images via multer
+*/
+const multer = require("multer")
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        console.log(req.body.category);
+        cb(null, `public/upload/${req.body.category}`)
+    },
+    filename: (req, file, cb) => {
+        cb(null, `${Date.now()}-${file.originalname}`);
+    }
+})
+
+const upload = multer({ storage: storage })
+
+module.exports = upload
