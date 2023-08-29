@@ -3,7 +3,7 @@ const SingleAbout = () => {
     const [about, setabout] = useState([]);
     useEffect(() => {
         const res = () => {
-            fetch('https://bhaibhopal.onrender.com/showabout', {
+            fetch('http://localhost:5000/showabout', {
                 method: 'GET',
             }).then((res) => res.json()).then((data) => {
                 setabout(data.data);
