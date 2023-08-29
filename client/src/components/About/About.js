@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Topbar from '../Topbar'
 import Navbar from '../Navbar/Navbar';
-
+const url="https://bhaibhopal.onrender.com";
 const About = () => {
     const [about, setabout] = useState([]);
     useEffect(() => {
-        const res = fetch('http://localhost:5000/showabout', {
+        const res = fetch('url/showabout', {
             method: 'GET',
         }).then((res) => res.json()).then((data) => {
             setabout(data.data);
