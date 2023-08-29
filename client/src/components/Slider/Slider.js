@@ -10,7 +10,7 @@ const Slider = () => {
     }, []);
 
     const showslider = () => {
-        fetch('http://localhost:5000/showslider',
+        fetch('https://bhaibhopal.onrender.com/showslider',
             {
                 method: 'GET',
             }).then((showslider) => showslider.json()).then((data) => {
