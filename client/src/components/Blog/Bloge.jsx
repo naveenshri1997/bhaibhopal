@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Bloge = ({ blogs }) => {
     const imageval = String(blogs.image);
     const str = imageval.slice(14);
-    const url = `http://localhost:5000/${str}`;
+    const url = `https://bhaibhopal.onrender.com/${str}`;
     console.log('uirl', url);
     return (
         <>
