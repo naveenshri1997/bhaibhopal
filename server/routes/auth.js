@@ -109,7 +109,7 @@ router.post('/login', async (req, res) => {
         }
         //       database username:username is you typed        
         const userLogin = await User.findOne({ username: username });
-
+            res.setHeader('Access-Control-Allow-Credentials', 'true');            
         if (!password == userLogin.password) {
             res.status(400).json({ error: "invalid" });
         } else {
