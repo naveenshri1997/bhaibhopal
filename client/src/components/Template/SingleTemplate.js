@@ -8,7 +8,7 @@ const SingleTemplate = () => {
     const { id } = useParams();
     const [template, settemplate] = useState([]);
     useEffect(() => {
-        const res = fetch(`http://localhost:5000/showonetemplate/${id}`, {
+        const res = fetch(`https://bhaibhopal.onrender.com/showonetemplate/${id}`, {
             method: 'GET',
         }).then((res) => res.json()).then((data) => {
             settemplate(data.data);
@@ -16,7 +16,7 @@ const SingleTemplate = () => {
     }, [id])
     const imageval = String(template.image);
     const str = imageval.slice(14);
-    const url = `http://localhost:5000/${str}`;
+    const url = `https://bhaibhopal.onrender.com/${str}`;
     console.log('uirl', url);
     return (
         <>
