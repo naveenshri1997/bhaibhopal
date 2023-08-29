@@ -6,7 +6,7 @@ import IpcLaw from './IpcLaw';
 const Law = () => {
     const [law, setLaw] = useState([]);
     useEffect(() => {
-        const res = fetch('http://localhost:5000/lawdata', {
+        const res = fetch('https://server-dccr.onrender.com/lawdata', {
             method: 'GET',
         }).then((res) => res.json()).then((data) => {
             setLaw(data.data);
