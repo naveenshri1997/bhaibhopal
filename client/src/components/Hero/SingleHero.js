@@ -11,8 +11,7 @@ const SingleHero = () => {
         };
         return () => res();
     }, [])
-    const url = 'https://bhaibhopal.onrender.com/';
-    // console.log('mydata', about)
+    const url = 'https://bhaibhopal.onrender.com/';    
     return (
         <>
 
