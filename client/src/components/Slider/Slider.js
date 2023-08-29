@@ -17,7 +17,7 @@ const Slider = () => {
                 setslider(data.data);
             })
     }
-    const url = 'http://localhost:5000/';
+    const url = 'https://bhaibhopal.onrender.com/';
     return (
 
         <>
