@@ -9,7 +9,12 @@ dotenv.config({ path: './config.env' });
 
 require('./db/conn');
 
-app.use(cors())
+app.use(cors());
+app.use(
+    cors({
+      origin: "https://bhaibhopalclient.onrender.com",
+    })
+);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/', express.static('public/upload'));
