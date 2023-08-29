@@ -11,7 +11,7 @@ import {
     LinkedinIcon,
 } from "react-share";
 const Judgem = ({ judge }) => {
-    const url = "http://localhost:5000";
+    const url = "https://bhaibhopal.onrender.com";
 
     return (
         <>
