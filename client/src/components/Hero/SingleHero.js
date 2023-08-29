@@ -3,7 +3,7 @@ const SingleHero = () => {
     const [hero, sethero] = useState([]);
     useEffect(() => {
         const res = () => {
-            fetch('http://localhost:5000/showhero', {
+            fetch('https://bhaibhopal.onrender.com/showhero', {
                 method: 'GET',
             }).then((res) => res.json()).then((data) => {
                 sethero(data.data);
@@ -11,7 +11,7 @@ const SingleHero = () => {
         };
         return () => res();
     }, [])
-    const url = 'http://localhost:5000/';
+    const url = 'https://bhaibhopal.onrender.com/';
     // console.log('mydata', about)
     return (
         <>
