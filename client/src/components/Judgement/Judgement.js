@@ -10,7 +10,7 @@ const Judgement = () => {
 
     const [judgements, setjudgements] = useState([]);  
     const alljudgement = async () => {
-        const res = await fetch('http://localhost:5000/showjudgement', {
+        const res = await fetch('https://bhaibhopal.onrender.com/showjudgement', {
             method: 'GET',
         })
         const result = await res.json();
