@@ -10,7 +10,7 @@ const Gallery = () => {
 
     const [galllery, setgalllery] = useState([]);
     const allgalllery = async () => {
-        const res = await fetch('http://localhost:5000/showgallery', {
+        const res = await fetch('https://bhaibhopal.onrender.com/showgallery', {
             method: 'GET',
         })
         const result = await res.json();
@@ -22,7 +22,7 @@ const Gallery = () => {
             console.log(result);
         }
     }
-    const url = `http://localhost:5000/`;
+    const url = `https://bhaibhopal.onrender.com/`;
     return (
         <>
             <Topbar />
