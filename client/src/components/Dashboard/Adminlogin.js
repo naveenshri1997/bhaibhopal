@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Adminlogin = () => {
-
+    const url ="https://bhaibhopal.onrender.com";
     const history = useNavigate();
     const [username, setusername] = useState('');
     const [password, setpassword] = useState('');
@@ -10,7 +10,7 @@ const Adminlogin = () => {
     const loginUser = async (e) => {
         e.preventDefault();
 
-        const res = await fetch('http://localhost:5000/login', {
+        const res = await fetch('url/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
