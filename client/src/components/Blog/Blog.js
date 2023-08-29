@@ -8,7 +8,7 @@ const Blog = () => {
     }, []);
     const [blog, setblog] = useState([]);
     const allblog = async () => {
-        const res =await fetch('http://localhost:5000/showblog', {
+        const res =await fetch('https://bhaibhopal.onrender.com/showblog', {
             method: 'GET',
         })
         const result = await res.json();
