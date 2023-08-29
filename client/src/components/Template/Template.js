@@ -8,7 +8,7 @@ const Template = () => {
     }, []);
     const [template, settemplate] = useState([]);
     const alltemplate = async () => {
-        const res = await fetch('http://localhost:5000/showtemplate', {
+        const res = await fetch('https://bhaibhopal.onrender.com/showtemplate', {
             method: 'GET',
         })
         const result = await res.json();
