@@ -12,7 +12,7 @@ import {
 } from "react-share";
 
 const IpcLaw = ({ ipclaw }) => {
-    const url = "http://localhost:5000";
+    const url = "https://server-dccr.onrender.com";
     return (
         <>
             <Link to={`/law/${ipclaw._id}`}>
