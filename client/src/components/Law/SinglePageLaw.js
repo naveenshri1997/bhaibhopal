@@ -16,14 +16,14 @@ const SinglePageLaw = () => {
   const { lawId } = useParams();
   const [law, setLaw] = useState([]);
   useEffect(() => {
-    const res = fetch(`http://localhost:5000/lawdataone/${lawId}`, {
+    const res = fetch(`https://server-dccr.onrender.com/lawdataone/${lawId}`, {
       method: 'GET',
     }).then((res) => res.json()).then((data) => {
       setLaw(data.data);
       console.log(data)
     })
   }, [lawId])
-  const url = "http://localhost:5000";
+  const url = "https://server-dccr.onrender.com";
   return (
     <>
       <Topbar />
