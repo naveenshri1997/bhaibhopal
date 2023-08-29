@@ -12,9 +12,8 @@ const Adminlogin = () => {
 
         const res = await fetch('url/login', {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            }, 
+             headers: {"Content-Type": "application/json"},
+                      withCredentials: true,     
             body: JSON.stringify({
                 username,
                 password
