@@ -18,7 +18,7 @@ const Singlejudgement = () => {
     const { id } = useParams();
     const [judgements, setjudgements] = useState([]);
     useEffect(() => {
-        const res = fetch(`http://localhost:5000/getonejudgement/${id}`, {
+        const res = fetch(`https://bhaibhopal.onrender.com/getonejudgement/${id}`, {
             method: 'GET',
         }).then((res) => res.json()).then((data) => {
             setjudgements(data.data);
