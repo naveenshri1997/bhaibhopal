@@ -11,8 +11,8 @@ const SingleAbout = () => {
         };
         return () => res();
     }, [])
-    const url = 'http://localhost:5000/';
-    // console.log('mydata', about)
+    const url = 'https://bhaibhopal.onrender.com/';
+    // console.log('mydata', about)    
     return (
         <>
 
