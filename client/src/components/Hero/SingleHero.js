@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 const SingleHero = () => {
     const [hero, sethero] = useState([]);
-    useEffect(() => {
-        const res = () => {
+    useEffect(() => {    
+        showhero();
+    }, [])
+    const showhero = () => {
             fetch('https://bhaibhopal.onrender.com/showhero', {
                 method: 'GET',
-            }).then((res) => res.json()).then((data) => {
+            }).then((showhero) => showhero.json()).then((data) => {
                 sethero(data.data);
             })
         };
-    }, [])
     const url = 'https://bhaibhopal.onrender.com/';    
     return (
         <>
