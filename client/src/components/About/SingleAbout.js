@@ -16,7 +16,7 @@ const SingleAbout = () => {
     return (
         <>
 
-            <section className='about'>
+            <div className='about'>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-md-12'>
@@ -70,7 +70,7 @@ const SingleAbout = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </>
     )
 }
