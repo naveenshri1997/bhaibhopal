@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
 const SingleAbout = () => {
     const [about, setabout] = useState([]);
-    useEffect(() => {
-        const res = () => {
+    useEffect(() => {            
+        showabout();
+    }, [])
+     const showabout = () => {
             fetch('https://bhaibhopal.onrender.com/showabout', {
                 method: 'GET',
-            }).then((res) => res.json()).then((data) => {
+            }).then((showabout) => showabout.json()).then((data) => {
                 setabout(data.data);
             })
-        };        
-    }, [])
-    const url = 'https://bhaibhopal.onrender.com/';    
+        }
+        const url = 'https://bhaibhopal.onrender.com/';    
     return (
         <>
 
