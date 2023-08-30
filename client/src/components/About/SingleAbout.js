@@ -12,7 +12,6 @@ const SingleAbout = () => {
         return () => res();
     }, [])
     const url = 'https://bhaibhopal.onrender.com/';    
-    // console.log('mydata', about)    
     return (
         <>
 
