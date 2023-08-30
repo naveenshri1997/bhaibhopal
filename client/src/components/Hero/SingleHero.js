@@ -9,7 +9,6 @@ const SingleHero = () => {
                 sethero(data.data);
             })
         };
-        return () => res();
     }, [])
     const url = 'https://bhaibhopal.onrender.com/';    
     return (
