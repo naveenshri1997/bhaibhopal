@@ -15,7 +15,7 @@ const SingleHero = () => {
     return (
         <>
 
-            <section className='hero'>
+            <div className='hero'>
                 <div className='container'>
                     <div className='row title_heading'>
                         <div className='col-md-12'>
@@ -46,7 +46,7 @@ const SingleHero = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </>
     )
 }
