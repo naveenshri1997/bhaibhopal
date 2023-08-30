@@ -8,8 +8,7 @@ const SingleAbout = () => {
             }).then((res) => res.json()).then((data) => {
                 setabout(data.data);
             })
-        };
-        return () => res();
+        };        
     }, [])
     const url = 'https://bhaibhopal.onrender.com/';    
     return (
