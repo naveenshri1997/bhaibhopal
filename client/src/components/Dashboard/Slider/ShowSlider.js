@@ -21,7 +21,7 @@ const ShowSlider = () => {
     }, [])
 
     const getslider = () => {
-        fetch('http://localhost:5000/showslider', {
+        fetch('https://bhaibhopal.onrender.com/showslider', {
             method: 'GET',
         }).then((getslider) => getslider.json()).then((data) => {
             setslider(data.data);
@@ -29,7 +29,7 @@ const ShowSlider = () => {
     }
 
     const deleteslider = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deleteslider/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/deleteslider/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -59,7 +59,7 @@ const ShowSlider = () => {
         {
             name: "Document",
             selector: (row) => <>
-                <iframe src={`http://localhost:5000/${row.image.slice(14)}`} width="100%" height="150px" />
+                <iframe src={`https://bhaibhopal.onrender.com/${row.image.slice(14)}`} width="100%" height="150px" />
             </>,
         },
         {
