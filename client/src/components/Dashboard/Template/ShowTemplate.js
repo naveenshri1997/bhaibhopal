@@ -21,7 +21,7 @@ const ShowTemplate = () => {
     }, [])
 
     const gettemplate = () => {
-        fetch('http://localhost:5000/showtemplate', {
+        fetch('https://bhaibhopal.onrender.com/showtemplate', {
             method: 'GET',
         }).then((gettemplate) => gettemplate.json()).then((data) => {
             settemplate(data.data);
@@ -29,7 +29,7 @@ const ShowTemplate = () => {
     }
 
     const deletetemplate = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deletetemplate/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/deletetemplate/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -63,7 +63,7 @@ const ShowTemplate = () => {
         {
             name: "Document",
             selector: (row) => <>
-                <iframe src={`http://localhost:5000/${row.image.slice(14)}`} width="100%" height="150px" />                                               
+                <iframe src={`https://bhaibhopal.onrender.com/${row.image.slice(14)}`} width="100%" height="150px" />                                               
             </>
         },
         {
