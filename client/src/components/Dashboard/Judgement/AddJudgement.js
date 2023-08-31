@@ -41,7 +41,7 @@ const AddJudgement = () => {
 
         console.log("add", formData);
 
-        const res = await fetch('http://localhost:5000/addjudgement', {
+        const res = await fetch('https://bhaibhopal.onrender.com/addjudgement', {
             method: 'POST',
             body: formData
         });
