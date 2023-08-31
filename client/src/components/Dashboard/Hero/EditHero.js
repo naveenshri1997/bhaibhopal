@@ -28,7 +28,7 @@ const EditHero = () => {
     }, [])
 
     const getonehero = async () => {
-        const res = await fetch(`http://localhost:5000/showonehero/${id}`);
+        const res = await fetch(`https://bhaibhopal.onrender.com/showonehero/${id}`);
         const data = await res.json();
         console.log('dta', data);
         settitle(data.data.title);
@@ -48,7 +48,7 @@ const EditHero = () => {
         formData.append('category', category);
         formData.append('image', image);
 
-        const res = await fetch(`http://localhost:5000/updatehero/${id}`, {           
+        const res = await fetch(`https://bhaibhopal.onrender.com/updatehero/${id}`, {           
             method: "PUT",
             body: formData
         });
