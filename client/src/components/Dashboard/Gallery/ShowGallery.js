@@ -21,7 +21,7 @@ const ShowGallery = () => {
     }, [])
 
     const getgallery = () => {
-        fetch('http://localhost:5000/showgallery', {
+        fetch('https://bhaibhopal.onrender.com/showgallery', {
             method: 'GET',
         }).then((getgallery) => getgallery.json()).then((data) => {
             setgallery(data.data);
@@ -29,7 +29,7 @@ const ShowGallery = () => {
     }
 
     const deletegallery = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deletegallery/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/deletegallery/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -59,7 +59,7 @@ const ShowGallery = () => {
         {
             name: "Document",
             selector: (row) => <>
-                <img src={`http://localhost:5000/${row.image.slice(14)}`} width="100%" height="150px" />
+                <img src={`https://bhaibhopal.onrender.com/${row.image.slice(14)}`} width="100%" height="150px" />
             </>,
         },
         {
