@@ -21,7 +21,7 @@ const ShowContact = () => {
     }, [])
 
     const getcontact = () => {
-        fetch('http://localhost:5000/showcontact', {
+        fetch('https://bhaibhopal.onrender.com/showcontact', {
             method: 'GET',
         }).then((getcontact) => getcontact.json()).then((data) => {
             setcontact(data.data);
@@ -29,7 +29,7 @@ const ShowContact = () => {
     }
 
     const deletecontact = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deletecontact/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/deletecontact/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
