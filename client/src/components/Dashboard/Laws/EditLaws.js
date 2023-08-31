@@ -29,7 +29,7 @@ const EditLaws = () => {
             seterrror(true);
             return false
         }
-        const res = await fetch(`http://localhost:5000/lawdataone/${id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/lawdataone/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": 'application/json',
@@ -55,7 +55,7 @@ const EditLaws = () => {
     }, [])
 
     const getonelaw = async () => {
-        const res = await fetch(`http://localhost:5000/lawdataone/${id}`);
+        const res = await fetch(`https://bhaibhopal.onrender.com/lawdataone/${id}`);
         const data = await res.json();
         setlaw_title(data.data.law_title);
         setlaw_Subtitle(data.data.law_Subtitle);
