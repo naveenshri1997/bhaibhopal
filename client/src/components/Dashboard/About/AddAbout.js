@@ -41,7 +41,7 @@ const AddAbout = () => {
 
         console.log("add", formData);
 
-        const res = await fetch('http://localhost:5000/addabout', {
+        const res = await fetch('https://bhaibhopal.onrender.com/addabout', {
             method: 'POST',
             body: formData
         });
