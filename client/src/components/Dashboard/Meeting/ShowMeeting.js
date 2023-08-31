@@ -21,7 +21,7 @@ const ShowMeeting = () => {
     }, [])
 
     const getmeeting = () => {
-        fetch('http://localhost:5000/showmeeting', {
+        fetch('https://bhaibhopal.onrender.com/showmeeting', {
             method: 'GET',
         }).then((getmeeting) => getmeeting.json()).then((data) => {
             setmeeting(data.data);
@@ -29,7 +29,7 @@ const ShowMeeting = () => {
     }
 
     const deletemeeting = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deletemeeting/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/deletemeeting/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -71,7 +71,7 @@ const ShowMeeting = () => {
         {
             name: "Image",
             selector: (row) => <>
-                <iframe src={`http://localhost:5000/${row.image.slice(14)}`} width="100%" height="150px" />                                               
+                <iframe src={`https://bhaibhopal.onrender.com/${row.image.slice(14)}`} width="100%" height="150px" />                                               
             </>
         },
         {
