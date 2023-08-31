@@ -27,7 +27,7 @@ const EditTemplate = () => {
     }, [])
 
     const getonetemplate = async () => {
-        const res = await fetch(`http://localhost:5000/showonetemplate/${id}`);
+        const res = await fetch(`https://bhaibhopal.onrender.com/showonetemplate/${id}`);
         const data = await res.json();
         console.log('dta', data);
         settitle(data.data.title);
@@ -45,7 +45,7 @@ const EditTemplate = () => {
         formData.append('category', category);
         formData.append('image', image);
 
-        const res = await fetch(`http://localhost:5000/updatetemplate/${id}`, {           
+        const res = await fetch(`https://bhaibhopal.onrender.com/updatetemplate/${id}`, {           
             method: "PUT",
             body: formData
         });
