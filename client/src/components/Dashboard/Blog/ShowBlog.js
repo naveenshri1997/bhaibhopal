@@ -21,7 +21,7 @@ const ShowBlog = () => {
     }, [])
 
     const getblog = () => {
-        fetch('http://localhost:5000/showblog', {
+        fetch('https://bhaibhopal.onrender.com/showblog', {
             method: 'GET',
         }).then((getblog) => getblog.json()).then((data) => {
             setblog(data.data);
@@ -29,7 +29,7 @@ const ShowBlog = () => {
     }
 
     const deleteblog = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deleteblog/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/deleteblog/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -63,7 +63,7 @@ const ShowBlog = () => {
         {
             name: "Document",
             selector: (row) => <>
-                <iframe src={`http://localhost:5000/${row.image.slice(14)}`} width="100%" height="150px" />                                               
+                <iframe src={`https://bhaibhopal.onrender.com/${row.image.slice(14)}`} width="100%" height="150px" />                                               
             </>
         },
         {
