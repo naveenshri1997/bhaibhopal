@@ -26,7 +26,7 @@ const EditGallery = () => {
     }, [])
 
     const showonegallery = async () => {
-        const res = await fetch(`http://localhost:5000/showonegallery/${id}`);
+        const res = await fetch(`https://bhaibhopal.onrender.com/showonegallery/${id}`);
         const data = await res.json();
         console.log('dta', data);
         settitle(data.data.title);
@@ -42,7 +42,7 @@ const EditGallery = () => {
         formData.append('category', category);
         formData.append('image', image);
 
-        const res = await fetch(`http://localhost:5000/updategallery/${id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/updategallery/${id}`, {
             method: "PUT",
             body: formData
         });
