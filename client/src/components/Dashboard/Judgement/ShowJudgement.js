@@ -21,7 +21,7 @@ const ShowJudgement = () => {
     }, [])
 
     const getjudgement = () => {
-        fetch('http://localhost:5000/showjudgement', {
+        fetch('https://bhaibhopal.onrender.com/showjudgement', {
             method: 'GET',
         }).then((getjudgement) => getjudgement.json()).then((data) => {
             setjudgement(data.data);
@@ -29,7 +29,7 @@ const ShowJudgement = () => {
     }
 
     const deletejudgement = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deletejudgement/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/deletejudgement/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -63,7 +63,7 @@ const ShowJudgement = () => {
         {
             name: "Document",
             selector: (row) => <>
-                <iframe src={`http://localhost:5000/${row.image.slice(14)}`} width="100%" height="150px" />                                               
+                <iframe src={`https://bhaibhopal.onrender.com/${row.image.slice(14)}`} width="100%" height="150px" />                                               
             </>
         },
         {
