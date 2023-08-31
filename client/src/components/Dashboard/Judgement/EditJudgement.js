@@ -27,7 +27,7 @@ const EditJudgement = () => {
     }, [])
 
     const getonejudgement = async () => {
-        const res = await fetch(`http://localhost:5000/getonejudgement/${id}`);
+        const res = await fetch(`https://bhaibhopal.onrender.com/getonejudgement/${id}`);
         const data = await res.json();
         console.log('dta', data);
         settitle(data.data.title);
@@ -45,7 +45,7 @@ const EditJudgement = () => {
         formData.append('category', category);
         formData.append('image', image);
 
-        const res = await fetch(`http://localhost:5000/updatejudgement/${id}`, {           
+        const res = await fetch(`https://bhaibhopal.onrender.com/updatejudgement/${id}`, {           
             method: "PUT",
             body: formData
         });
