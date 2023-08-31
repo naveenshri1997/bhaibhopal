@@ -28,7 +28,7 @@ const EditAbout = () => {
     }, [])
 
     const getoneabout = async () => {
-        const res = await fetch(`http://localhost:5000/showoneabout/${id}`);
+        const res = await fetch(`https://bhaibhopal.onrender.com/showoneabout/${id}`);
         const data = await res.json();
         console.log('dta', data);
         settitle(data.data.title);
@@ -48,7 +48,7 @@ const EditAbout = () => {
         formData.append('category', category);
         formData.append('image', image);
 
-        const res = await fetch(`http://localhost:5000/updateabout/${id}`, {           
+        const res = await fetch(`https://bhaibhopal.onrender.com/updateabout/${id}`, {           
             method: "PUT",
             body: formData
         });
