@@ -21,7 +21,7 @@ const ShowHero = () => {
     }, [])
 
     const gethero = () => {
-        fetch('http://localhost:5000/showhero', {
+        fetch('https://bhaibhopal.onrender.com/showhero', {
             method: 'GET',
         }).then((gethero) => gethero.json()).then((data) => {
             sethero(data.data);
@@ -29,7 +29,7 @@ const ShowHero = () => {
     }
 
     const deletehero = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deletehero/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/deletehero/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -67,7 +67,7 @@ const ShowHero = () => {
         {
             name: "Document",
             selector: (row) => <>
-                <iframe src={`http://localhost:5000/${row.image.slice(14)}`} width="100%" height="150px" />                                               
+                <iframe src={`https://bhaibhopal.onrender.com/${row.image.slice(14)}`} width="100%" height="150px" />                                               
             </>
         },
         {
