@@ -43,7 +43,7 @@ const AddMeeting = () => {
 
         console.log("add", formData);
 
-        const res = await fetch('http://localhost:5000/addmeeting', {
+        const res = await fetch('https://bhaibhopal.onrender.com/addmeeting', {
             method: 'POST',
             body: formData
         });
