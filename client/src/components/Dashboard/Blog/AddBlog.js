@@ -39,7 +39,7 @@ const AddBlog = () => {
 
         console.log("add", formData);
 
-        const res = await fetch('http://localhost:5000/addblog', {
+        const res = await fetch('https://bhaibhopal.onrender.com/addblog', {
             method: 'POST',
             body: formData
         });
