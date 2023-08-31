@@ -28,7 +28,7 @@ const AddLaws = () => {
             seterrror(true);
             return false
         }
-        const res = await fetch('http://localhost:5000/addlaw', {
+        const res = await fetch('https://bhaibhopal.onrender.com/addlaw', {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
