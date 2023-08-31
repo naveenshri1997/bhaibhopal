@@ -28,7 +28,7 @@ const AddContact = () => {
             seterrror(true);
             return false
         }
-        const res = await fetch('http://localhost:5000/addcontact', {
+        const res = await fetch('https://bhaibhopal.onrender.com/addcontact', {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
