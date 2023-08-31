@@ -26,7 +26,7 @@ const EditSlider = () => {
     }, [])
 
     const showoneslider = async () => {
-        const res = await fetch(`http://localhost:5000/showoneslider/${id}`);
+        const res = await fetch(`https://bhaibhopal.onrender.com/showoneslider/${id}`);
         const data = await res.json();
         console.log('dta', data);
         settitle(data.data.title);
@@ -42,7 +42,7 @@ const EditSlider = () => {
         formData.append('category', category);
         formData.append('image', image);
 
-        const res = await fetch(`http://localhost:5000/updateslider/${id}`, {           
+        const res = await fetch(`https://bhaibhopal.onrender.com/updateslider/${id}`, {           
             method: "PUT",
             body: formData
         });
