@@ -39,7 +39,7 @@ const AddTemplate = () => {
 
         console.log("add", formData);
 
-        const res = await fetch('http://localhost:5000/addtemplate', {
+        const res = await fetch('https://bhaibhopal.onrender.com/addtemplate', {
             method: 'POST',
             body: formData
         });
