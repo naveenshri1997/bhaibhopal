@@ -21,7 +21,7 @@ const ShowLaws = () => {
     }, [])
 
     const getlaw = () => {
-        fetch('http://localhost:5000/lawdata', {
+        fetch('https://bhaibhopal.onrender.com/lawdata', {
             method: 'GET',
         }).then((getlaw) => getlaw.json()).then((data) => {
             setLaw(data.data);
@@ -29,7 +29,7 @@ const ShowLaws = () => {
     }
 
     const deleteLaw = async (_id) => {
-        const res = await fetch(`http://localhost:5000/dellaw/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/dellaw/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
