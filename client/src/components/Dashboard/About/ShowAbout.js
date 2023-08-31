@@ -21,7 +21,7 @@ const ShowAbout = () => {
     }, [])
 
     const getabout = () => {
-        fetch('http://localhost:5000/showabout', {
+        fetch('https://bhaibhopal.onrender.com/showabout', {
             method: 'GET',
         }).then((getabout) => getabout.json()).then((data) => {
             setabout(data.data);
@@ -29,7 +29,7 @@ const ShowAbout = () => {
     }
 
     const deleteabout = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deleteabout/${_id}`, {
+        const res = await fetch(`https://bhaibhopal.onrender.com/deleteabout/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -67,7 +67,7 @@ const ShowAbout = () => {
         {
             name: "Document",
             selector: (row) => <>
-                <iframe src={`http://localhost:5000/${row.image.slice(14)}`} width="100%" height="150px" />                                               
+                <iframe src={`https://bhaibhopal.onrender.com/${row.image.slice(14)}`} width="100%" height="150px" />                                               
             </>
         },
         {
