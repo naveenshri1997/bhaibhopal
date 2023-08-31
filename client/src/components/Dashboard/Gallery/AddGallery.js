@@ -34,7 +34,7 @@ const AddGallery = () => {
         formData.append('category', category);
         formData.append('image', image);
 
-        const res = await fetch('http://localhost:5000/addgallery', {
+        const res = await fetch('https://bhaibhopal.onrender.com/addgallery', {
             method: 'POST',
             body: formData
         });
